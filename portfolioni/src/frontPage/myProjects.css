@@ -1,0 +1,13 @@
+.schoolProjectsGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+}
+.gridObject{
+    padding: 2vw;
+    border: solid rgb(165, 200, 158)  2px;
+    background-color: beige;
+}
