@@ -1,0 +1,10 @@
+#_Footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(165, 200, 158);
+    color: white;
+    padding: 5vh;
+    font-size: 5vh;
+
+}

@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import _Header from './_Layout/_Header'
-import MyProjects from './frontPage/myProjects'
+import _Header from './_Layout/_Header';
+import _Footer from './_Layout/_Footer';
+import MyProjects from './frontPage/projects/myProjects';
+import Resume from './frontPage/resume/resume';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +14,8 @@ root.render(
     <_Header />
     <MyProjects />
     <App />
+    <Resume />
+    <_Footer/>
     
   </React.StrictMode>
 );

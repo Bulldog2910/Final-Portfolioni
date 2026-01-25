@@ -7,6 +7,9 @@
     padding-top: 5vh;
 }
 .gridObject{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2 / span 2 ;
     padding: 2vw;
     border: solid rgb(165, 200, 158)  2px;
     background-color: beige;

@@ -1,0 +1,24 @@
+#skills{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border: solid 2px rgb(165, 200, 158);
+    margin-bottom: 2vh;
+}
+
+#programmingSkills{
+    background-color: bisque;
+    padding-left: 1vw;
+}
+#lifeSkills{
+    padding-left: 1vw;
+    background-color: beige;
+    border-top: solid 2px rgb(165, 200, 158);
+}
+
+#lifeLanguages{
+    padding-left:1vw;
+    background-color: bisque;
+    border-top: solid 2px rgb(165, 200, 158);
+}
