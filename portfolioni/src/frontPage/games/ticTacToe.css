@@ -1,0 +1,21 @@
+.ticTacToe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+.ticTacToeGrid{
+    display: grid;
+    grid-template-columns: 4vh 4vh 4vh;
+}
+
+.ticTacToeGriObject{
+    height: 4vh;
+    width: 4vh;
+}
+
+.ticTacToeButton{
+    height: 4vh;
+    width: 4vh;
+}
