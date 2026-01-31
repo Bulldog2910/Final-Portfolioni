@@ -8,6 +8,7 @@ import _Footer from './_Layout/_Footer';
 import MyProjects from './frontPage/projects/myProjects';
 import Resume from './frontPage/resume/resume';
 import TicTacToe from './frontPage/games/ticTacToe';
+import SnakeBoard from './frontPage/games/snakeboard/snakeboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,8 @@ root.render(
     <App />
     <Resume />
     <TicTacToe />
+    <SnakeBoard />
+
     <_Footer/>
     
   </React.StrictMode>
