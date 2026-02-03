@@ -11,22 +11,32 @@ export default function SnakeBoard() {
     const [pause, setPause] = useState(false)
 
     const fetchState = async () => {
-        const res = await fetch(`${backendUrl}/state`);
-        const data = await res.json();
+        try{
+            const res = await fetch(`${backendUrl}/state`);
+            const data = await res.json();
 
-        setGrid(data.grid);
-        setWon(data.won)
-        setLost(data.lost)
+            setGrid(data.grid);
+            setWon(data.won)
+            setLost(data.lost)
+        } catch (error){
+            console.log("An error occurred while fetching snakeboard: " + error.message);
+        }
+        
     };
 
     const resetGame = async () => {
-        const res = await fetch(`${backendUrl}/reset`, {
-            method: "POST",
-        });
-        const data = await res.json();
-        setGrid(data.grid);
-        setLost(data.lost);
-        setWon(data.won);
+        try {
+            const res = await fetch(`${backendUrl}/reset`, {
+                method: "POST",
+            });
+            const data = await res.json();
+            setGrid(data.grid);
+            setLost(data.lost);
+            setWon(data.won);
+        } catch (error){
+             console.log("An error occurred while reseting snakeboard: " + error.message);
+        } 
+        
     };
 
     useEffect(() => {
@@ -54,16 +64,23 @@ export default function SnakeBoard() {
         if (pause) return;
         
         const interval = setInterval(async () => {
-            const res = await fetch(`${backendUrl}/move`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ direction })
-            });
+            try{
+                 const res = await fetch(`${backendUrl}/move`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ direction })
+                    
+                });
 
-            const data = await res.json();
-            setGrid(data.grid);
-            setLost(data.lost);
-            setWon(data.won);
+                const data = await res.json();
+                    setGrid(data.grid);
+                    setLost(data.lost);
+                    setWon(data.won);
+                }
+                catch (error){
+                    console.log("An error occurred: " + error.message);
+                }
+                    
         }, 400);
 
         return () => clearInterval(interval);

@@ -9,6 +9,7 @@ import MyProjects from './frontPage/projects/myProjects';
 import Resume from './frontPage/resume/resume';
 import TicTacToe from './frontPage/games/ticTacToe';
 import SnakeBoard from './frontPage/games/snakeboard/snakeboard';
+import GithubRequest from './frontPage/github/githubAllRepos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
     <Resume />
     <TicTacToe />
     <SnakeBoard />
+    <GithubRequest />
 
     <_Footer/>
     
