@@ -1,3 +1,9 @@
+.resume {
+  min-height: 120vh; /* just to ensure scroll space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #skills{
     display: flex;
     flex-direction: column;
@@ -11,6 +17,8 @@
     background-color: bisque;
     padding-left: 1vw;
 }
+
+
 #lifeSkills{
     padding-left: 1vw;
     background-color: beige;
@@ -22,3 +30,24 @@
     background-color: bisque;
     border-top: solid 2px rgb(165, 200, 158);
 }
+
+.resume-card {
+  padding: 2rem;
+
+  transition:
+    transform 1s ease,
+    opacity 0.6s ease;
+}
+
+/* Initial / scrolled-up state */
+.resume-card.out {
+  transform: translateX(-10vw);
+  opacity: 0;
+}
+
+/* Scrolled-down state */
+.resume-card.in {
+  transform: translateX(0);
+  opacity: 1;
+}
+

@@ -1,5 +1,8 @@
 import './resume.css';
+import { useEffect, useState, useRef } from 'react';
+
 function Resume() {
+
     const programmingSkillsArray = [
         '.NET', 
         'PHP', 
@@ -13,7 +16,7 @@ function Resume() {
         'PostgreSQL', 
         'MariaDB', 
         'Docker'
-    ];
+        ];
 
     const lifeSkillsArray = [
         'Running',
@@ -29,6 +32,7 @@ function Resume() {
             'Portuguese (8/10)',
             'Spanish    (6/10)'
         ]
+
     const programmingSkillsOutput = programmingSkillsArray.map((programmingLanguage) =>
                         <li>{programmingLanguage}</li>
     );
@@ -39,12 +43,34 @@ function Resume() {
                         <li>{lifeLanguages}</li>
     );
 
+
+    const animatedRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {setIsVisible(entry.isIntersecting);},{threshold: 0.5,});
+
+        if(animatedRef.current) {
+            observer.observe(animatedRef.current);
+        }
+    }, []);
+
+
+
     return (
         <div id='skills'>
-            <div id='programmingSkills'>
-                <h1>My skills as a programmer</h1>
-                <ul>{programmingSkillsOutput}</ul>
+            <div 
+                ref={animatedRef}
+                className={`resume-card ${isVisible ? "in" : "out"}`}
+            >
+                <div 
+                    id='programmingSkills'
+                >
+                    <h1>My skills as a programmer</h1>
+                    <ul>{programmingSkillsOutput}</ul>
+                </div>
             </div>
+            
             <div id='lifeSkills'>
                 <h1> My life skills</h1>
                 <ul>{lifeSkillsOutput}</ul>

@@ -129,7 +129,7 @@ export function TicTacToe(){
         <div>
             
         <div className="ticTacToe">
-            <h3>Tic Tac Toe made in 100% Javascript/React</h3>
+            <h2>Tic Tac Toe made in <br></br>100%  Javascript/React</h2>
             <div className="whosTurn" hidden={buttonDisabled}>{currentOpponent}'s time to play</div>
             <div className="ticTacToeGrid">
                 {returnOutput}

@@ -18,8 +18,11 @@ root.render(
     <MyProjects />
     <App />
     <Resume />
-    <TicTacToe />
-    <SnakeBoard />
+    <div className='games'>
+      <TicTacToe />
+      <SnakeBoard />
+    </div>
+    
     <GithubRequest />
 
     <_Footer/>

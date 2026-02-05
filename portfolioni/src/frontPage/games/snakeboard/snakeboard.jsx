@@ -99,7 +99,7 @@ export default function SnakeBoard() {
             style={{ outline: "none" }}
             onKeyDown={handleKey}
             >
-            <h2>Snake (Python Backend)</h2>
+            <h2>Snake (Python Backend)</h2><p>Use Arrow keys to move snake</p> 
             {lost && <h3 style={{ color: "red" }}>You Lost</h3>}
             {won && <h3 style={{ color: "green" }}>You Won!</h3>}
             <div
