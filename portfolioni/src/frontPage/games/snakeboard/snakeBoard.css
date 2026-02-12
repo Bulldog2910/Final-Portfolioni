@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .snakeGridGrid{
     display: flex;
     flex-direction: column;

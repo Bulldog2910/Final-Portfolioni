@@ -102,7 +102,8 @@ export default function SnakeBoard() {
             <h2>Snake (Python Backend)</h2><p>Use Arrow keys to move snake</p> 
             {lost && <h3 style={{ color: "red" }}>You Lost</h3>}
             {won && <h3 style={{ color: "green" }}>You Won!</h3>}
-            <div
+            <div className="rounded bg-slate-400">
+                <div
                     style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(10, 20px)",
@@ -121,20 +122,24 @@ export default function SnakeBoard() {
                             ? "red"
                             : cell === "Lost"
                             ? "black"
-                            : "#ffb7f9b9",
+                            : "transparent",
+                        borderRadius: cell === "Apple" ? "50%" : "0",
                         
-                        }}
+                        }
+                    }
                     />
                 ))}
                 
             </div>
-            <button onClick={resetGame} style={{ marginTop: "20px", padding: "20px"}}>
+            </div>
+            
+            <button className="bg-slate-400 rounded" onClick={resetGame} style={{ marginTop: "20px", padding: "10px"}}>
                     Restart Game
             </button>
-            <button onClick={() => setPause(true)} style={{ marginTop: "20px", padding: "20px"}}>
+            <button className="bg-slate-400 rounded" onClick={() => setPause(true)} style={{ marginTop: "20px", padding: "10px"}}>
                     Pause
             </button>
-            <button onClick={() => setPause(false)} style={{ marginTop: "20px", padding: "20px"}}>
+            <button className="bg-slate-400 rounded" onClick={() => setPause(false)} style={{ marginTop: "20px", padding: "10px"}}>
                     Start
             </button>
         </div>  

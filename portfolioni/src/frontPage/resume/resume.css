@@ -1,5 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .resume {
-  min-height: 120vh; /* just to ensure scroll space */
+  min-height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,45 +13,139 @@
     flex-direction: column;
     margin-left: 10vw;
     margin-right: 10vw;
-    border: solid 2px rgb(165, 200, 158);
     margin-bottom: 2vh;
 }
 
 #programmingSkills{
-    background-color: bisque;
+    background-color: rgb(202, 214, 218);
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    padding-right: 2vw;
     padding-left: 1vw;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+
+#programmingSkills h1{
+    margin-bottom: 2vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+#programmingSkillsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: center;
+  
+}
+.gridItem {
+  background-color: rgba(75, 75, 75, 0.452);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 2vh;
+  text-align: center;
+  font-weight: bold;
 }
 
 
 #lifeSkills{
     padding-left: 1vw;
-    background-color: beige;
-    border-top: solid 2px rgb(165, 200, 158);
+    background-color: rgb(202, 214, 218);
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    padding-right: 2vw;
+    padding-left: 1vw;
+    
 }
 
 #lifeLanguages{
     padding-left:1vw;
-    background-color: bisque;
-    border-top: solid 2px rgb(165, 200, 158);
+    background-color: rgb(202, 214, 218);
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    padding-right: 2vw;
+    padding-left: 1vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    
+}
+#lifeSkillsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+#lifeSkills h1{
+    text-align: center;
+    margin-bottom: 2vh;
+    font-size: 3vw;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+#lifeLanguagesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: center;
 }
 
-.resume-card {
-  padding: 2rem;
-
+#lifeLanguages h1{
+    text-align: center;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+.resume-card1, .resume-card2, .resume-card3 {
   transition:
     transform 1s ease,
-    opacity 0.6s ease;
+    opacity 1s ease;
 }
 
+
+
 /* Initial / scrolled-up state */
-.resume-card.out {
-  transform: translateX(-10vw);
+.resume-card1.out {
+  transform: translateX(-40vw);
   opacity: 0;
+
 }
 
 /* Scrolled-down state */
-.resume-card.in {
+.resume-card1.in {
   transform: translateX(0);
   opacity: 1;
 }
+/* Initial / scrolled-up state */
+.resume-card2.out {
+  transform: translateX(40vw);
+  opacity: 0;
+
+}
+
+/* Scrolled-down state */
+.resume-card2.in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Initial / scrolled-up state */
+.resume-card3.out {
+  transform: translateX(-40vw);
+  opacity: 0;
+
+}
+
+/* Scrolled-down state */
+.resume-card3.in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
 

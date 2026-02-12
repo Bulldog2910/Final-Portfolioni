@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import React from 'react';
 import "./ticTacToe.css"
                  
@@ -27,7 +26,7 @@ export function TicTacToe(){
     const winneroutput = winner ? 
     (<>
         <div> {currentOpponent} won the game, congrats!</div> 
-        <button onClick={reset}>
+        <button className='bg-slate-300 p-1 justify-items-center hover:bg-slate-500' onClick={reset}>
             Reset
         </button>
     </>) 
@@ -80,7 +79,7 @@ export function TicTacToe(){
             const losersOutput =  
                 (<>
                     <div> Nobody won the game.</div> 
-                    <button onClick={reset}>
+                    <button className='bg-slate-900' onClick={reset}>
                         Reset
                     </button>
                 </>) 
@@ -114,7 +113,7 @@ export function TicTacToe(){
         returnOutput.push(
             <div className='ticTacToeGriObject' key={x}> 
                 <button
-                    className="ticTacToeButton"
+                    className="ticTacToeButton bg-oklch(97% 0.014 254.604) hover:bg-oklch(90% 0.014 254.604) disabled:bg-gray-400 disabled:text-gray-700 disabled:cursor-not-allowed"
                     onClick={() => updateTicTacToe(x)}
                     disabled={buttonDisabled}
                     id={x}
@@ -136,8 +135,8 @@ export function TicTacToe(){
                 
             </div>
             
-            <div className="winner">{winneroutput}</div>
-            <div className="winner">{losers}</div>
+            <div className="winner justify-items-center flex-column">{winneroutput}</div>
+            <div className="winner justify-items-center flex-column">{losers}</div>
 
         </div>
         </div>
