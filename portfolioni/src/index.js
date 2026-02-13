@@ -10,6 +10,7 @@ import Resume from './frontPage/resume/resume';
 import TicTacToe from './frontPage/games/ticTacToe';
 import SnakeBoard from './frontPage/games/snakeboard/snakeboard';
 import GithubRequest from './frontPage/github/githubAllRepos';
+import PongGame from './frontPage/games/pong/pong';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +22,8 @@ root.render(
     <div className='games bg-slate-200 ml-10 mr-10 rounded-lg p-5'>
       <TicTacToe />
       <SnakeBoard />
-      <p>Pong comming soon</p>
+      <PongGame/>
+
     </div>
     
     <GithubRequest />
